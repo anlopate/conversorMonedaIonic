@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Conversor de moneda</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Conversor Moneda</strong>
+    <ion-input label="Cantidad" class="cantidad" type="number" [(ngModel)]="cantidad">
+     
+    </ion-input>
+    <ion-select class="cantidad" placeholder="Cambiar a">
+      <ion-select-option value="euro">Euro</ion-select-option>
+      <ion-select-option value="dolar">Dólar</ion-select-option>
+    </ion-select>
+    <br>
+    <ion-button class="boton" expand="block" (click)="calcular()">Cambiar</ion-button>
+    <br>
+    <h5>{{resultado}}</h5>
+    <br>
+    <ion-button class="boton" expand="block" (click)="reiniciar()">Reiniciar</ion-button>
+  </div>
+
+</ion-content>
